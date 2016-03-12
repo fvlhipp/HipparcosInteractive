@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hipparcos Data Access</title>
+  
+
+  <link rel="shortcut icon" href="./img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "None";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script>
+  <script src="./js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Hipparcos Data Access</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href=".">Home</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#hipparcos-interactive-data-access">Hipparcos interactive data access</a></li>
+                
+                    <li><a class="toctree-l4" href="#getting-started">Getting started</a></li>
+                
+                    <li><a class="toctree-l4" href="#about">About</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>GetStarted</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="MainWindow/">MainWindow</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Source selection</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/SelectSource/">SelectSource</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/SelectSource/SelectByNumber/">By number</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/SelectSource/SelectHip/">By Hip</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/SelectSource/SelectPosition/">By Position</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/SelectSource/SelectSolution/">By Solution</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/HRDiagrams/">HR diagrams</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Photometry/">Photometry</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/ErrorDistr/">Error Distributions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Maps/">Maps</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Calibrations</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/">Calibrations</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Astrometry</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/CalibrationAstr/">CalibrationAstr</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Astrometry/CalibrationInstrPar/">Instrument parameters</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Astrometry/CalibrationMSD/">Medium-scale distortion</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Astrometry/CalibrationSolStat/">Solution statistics</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Focal plane</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/CalibrationFPA/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/FPA/CalibrationIfov/">Instantaneous field of view</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/FPA/CalibrationOTF/">Optical transfer function</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/FPA/CalibrationPhot/">iDT photometry</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Star Mapper</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/CalibrationSM/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/SM/CalibrationSMBackgr/">Star mapper background</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/SM/CalibrationSMGeom/">Star mapper geometric calibration</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/SM/CalibrationSMResid/">Star mapper residua;s</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/SM/CalibrationSMPhot/">Star mapper photometry</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/SM/CalibrationSMSSRF/">Single-slit response functions</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Miscellaneous</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/CalibrationMisc/">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Miscellaneous/CalibrationClock/">On-board clock</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Miscellaneous/CalibrationGyroDrift/">Gyro drift harmonics</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Miscellaneous/CalibrationClock/">Gyro temprature effects</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Miscellaneous/CalibrationGyroOrient/">Gyro orientation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Miscellaneous/CalibrationGyro/">Gyro drift</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Calibrations/Miscellaneous/CalibrationGyrNoise/">Gyro noise levels</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Source information</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/SummaryInfWind/">SummaryInfWind</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Summary/SummarySourceId/">Source identifiers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Summary/SummaryAstrom/">Astrometric summary</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Summary/AstromDetail/">Details astrometric solution</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Summary/ReAnalyze/">Re-analyze</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Summary/SummaryPhotom/">Photometric summary</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Summary/SummaryLightCurve/">Light curve</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/Summary/TychoEpPhot/">Tycho epoch photometry</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/ListIdentifiers/">List of identifiers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Main/ListCriteria/">List by criteria</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="InterfaceStruct/">Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>About</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="DataFiles/">Data</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Development/">Development</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Charts</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="ChartFacilities/">Chart facilities</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="PdfChart/">Pdf form chart</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Output file options</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="OutputOptions/">OutputOptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Output/OutputIdentifiers/">Identifiers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Output/OutputAstrom/">Astrometry</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Output/OutputPhotom/">Photometry</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Output/OutputMisc/">Miscellaneous</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Output/OutputFormat/">Format selection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="Output/OutputFormatSpec/">Output Format Specifications</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="popupmenu/">Popup menu</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Hipparcos Data Access</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="hipparcos-interactive-data-access">Hipparcos interactive data access</h1>
+<p>This is the users manual for the Hipparcos interactive data access software.</p>
+<p>The Hipparcos data access software provides tools to interrogate the Hipparcos data from overall statistics to the solution details for individual stars. It grew from the need to be able to interact directly with the data in the Hipparcos catalogue, being able to display relevant data in such a way that details at any resolution can be made visible, from overall statistics and distributions down to the details of individual stars. It also provides access to large sets of ground-based photometric and spectroscopic data, where the Hipparcos information on in particular parallaxes can give more detailed insight in colour-index dependencies. To provide further insight into the Hipparcos data, the most relevant calibration data are also made available.</p>
+<p>Further details on data and methods used or available to the user are:</p>
+<ul>
+<li><a href="DataFiles/">Data files</a></li>
+<li><a href="Development/">Development tools</a></li>
+<li><a href="ChartFacilities/">Chart facilities</a></li>
+<li><a href="InterfaceStruct/">Structure of the interface</a></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>The software and data files can be downloaded from the <a href="http://www.cosmos.esa.int/web/hipparcos/interactive-data-access">ESA Hipparcos web site</a>. </p>
+<p>The installation of the software and data files is simply by copying the zip file and unzip it to the data folder and executable jar file. If Java 8 has been installed, the program should run by executing the jar file (double click on Windows). This activates the <a href="MainWindow/">main window</a> from which all data access is run.</p>
+<h2 id="about">About</h2>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><strong>Hipparcos interactive data access</strong> by <strong>Floor van Leeuwen, Institute of Astronomy, Cambridge</strong>, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+<p>Inquiries, suggestions etc to <em>fvl@ast.cam.ac.uk</em> or the <a href="http://www.cosmos.esa.int/web/hipparcos/hipparcos-helpdesk">Hipparcos helpdesk</a> at ESA. </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="MainWindow/" class="btn btn-neutral float-right" title="MainWindow"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="MainWindow/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.14.0
+Build Date UTC : 2016-03-09 19:37:11.269164
+-->
